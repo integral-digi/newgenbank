@@ -15,12 +15,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   primary: "CircularStd-Medium, sans",
-      //   secondary: "CircularStd-Bold, sans",
-      //   black: "CircularStd-Black, sans",
-      //   book: "CircularStd-Book, sans"
-      // },
+      fontFamily: {
+        medium: "CircularStd-Medium, sans",
+        bold: "CircularStd-Bold, sans",
+        black: "CircularStd-Black, sans",
+        normal: "CircularStd-Book, sans"
+      },
       
       screens: {
         '2xl': {'max': '1535px'},
@@ -41,8 +41,8 @@ const config: Config = {
     },
   },
   plugins: [
-    // require('@headlessui/tailwindcss'),
-    // require('flowbite/plugin')
+    require('@headlessui/react'),
+    require('flowbite/plugin')
   ],
 };
 

@@ -1,3 +1,4 @@
+"use client"
 import { Chart } from 'react-google-charts';
 
 interface Transaction {
@@ -11,14 +12,15 @@ interface Props {
 }
 
 const TransChart: React.FC<Props> = ({ transactions }) => {
-    
     // options configuration...
     const options = {
         chartArea: { width: "100%", height: "100%" },
-        hAxis: { title: "Time", titleTextStyle: { color: "#333" }, format: 'MMM d', },
+        hAxis: { 
+            title: "Time", titleTextStyle: { color: "#333333" }, format: "MMM d" 
+        },
         legend: { position: "none" },
         line: { color: "#ECF3FD", lineWidth: 0 },
-        colors: ['#1A73E8', '#5F9DEF', '#ECF3FD', '#EBEDED', '#EBEDED'],
+        colors: ['#1A73E8', '#1A73E8', '#1A73E8', '#EBEDED', '#EBEDED'],
         crosshair: { trigger: "both", color: "#EBEDED" },
         vAxis: {
             titleTextStyle: { color: "#333" },
@@ -55,24 +57,27 @@ const TransChart: React.FC<Props> = ({ transactions }) => {
     }, new Map<string, { date: string; inflow: number; outflow: number }>());
 
     const chartData = Array.from(groupedTransactions.values()).map(({ date, inflow, outflow }) => [
-        new Date(date),
+        new Date(date), // Convert the date string to a Date object
         inflow,
         outflow,
     ]);
 
     return (
-        <div className='w-full bg-white'>
+        <div className="w-full">
             <Chart
                 width={'100%'}
-                height={'400px'}
                 chartType="AreaChart"
-                legendToggle={false}
                 data={[
                     ['Date', 'Inflow', 'Outflow'],
                     ...chartData,
                 ]}
-                options={options}
-                rootProps={{ 'data-testid': '1' }}
+                options={{
+                    ...options,
+                    hAxis: {
+                        ...options.hAxis,
+                        format: 'MMM d', // Format the x-axis as required
+                    },
+                }}
             />
         </div>
     );

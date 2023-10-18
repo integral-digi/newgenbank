@@ -17,7 +17,7 @@ const navItems: NavItemsProps[] = [
     { id: 5, name: "Account", href: "/account", icon: "/assets/bank.svg", isActive: false }
 ];
 
-const logoMain: string = "/images/logo.svg"
+const logoMain: string = "/images/logo.svg";
 
 const SideNav = () => {
     const [active, setActive] = useState(false);
@@ -25,22 +25,24 @@ const SideNav = () => {
     //click handler to identify active link
     const handleClick = () => {
         setActive(!active)
-    }
+    };
 
     return (
-        <div className="w-full h-full space-y-16 bg-neutral-50">
-            <span className="">
-                <img src={logoMain} alt="logo" className="h-9 w-auto" />
-            </span>
-            <div className="space-y-8">
-                {navItems.map((item) => (
-                    <div key={item.id} className="flex items-center space-x-4" onClick={handleClick}>
-                        <img src={item.icon} className="w-5 h-5" />
-                        <p className="text-base font-medium text-zinc-800">{item.name}</p>
-                    </div>
-                ))}
+        <nav className="w-full h-full bg-white">
+            <div className="space-y-16 pl-8 pt-6">
+                <span className="">
+                    <img src={logoMain} alt="logo" className="h-9 w-auto" />
+                </span>
+                <div className="space-y-8">
+                    {navItems.map((item) => (
+                        <div key={item.id} className="flex items-center space-x-4" onClick={handleClick}>
+                            <img src={item.icon} className="w-5 h-5" />
+                            <p className="text-base font-medium text-zinc-800">{item.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </nav>
     )
 }
 
