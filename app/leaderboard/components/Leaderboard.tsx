@@ -1,5 +1,5 @@
 import React from "react";
-import { generateRandomLeaderboardEntries } from "@/app/components/Leaderboad";
+import { generateRandomLeaderboardEntries } from "@/app/components/Leaderboard";
 
 const formattedCurr = (curr:any) => {
     return curr?.toLocaleString('en-US', {

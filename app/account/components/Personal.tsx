@@ -54,7 +54,7 @@ const PersonalSettings = () => {
     };
 
     return (
-        <section className="w-[60%] min-h-screen space-y-16">
+        <section className="w-[60%] min-h-screen space-y-16 lg:w-full">
             <section className="space-y-8 w-full">
                 <section className="w-24 h-24 relative">
                     <img src={user.avatar} alt={user.username} className="w-full h-full rounded-full object-cover" />

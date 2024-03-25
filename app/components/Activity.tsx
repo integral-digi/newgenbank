@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Leaderboard from "./Leaderboad";
+import Leaderboard from "./Leaderboard";
 
 const formattedCurr = (curr: number) => {
     return curr?.toLocaleString('en-US', {
