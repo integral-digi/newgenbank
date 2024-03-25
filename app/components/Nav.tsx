@@ -22,8 +22,8 @@ export const navChildren: NavChild[]  = [
     { id: 3, name: "Market", href: "/market" },
 ];
 
-//discord button info
-const buttonInfo: ButtonInfo  = {
+//sign in button info
+export const buttonInfo: ButtonInfo  = {
     name: "Sign in",
     icon: "/assets/user.svg",
 };

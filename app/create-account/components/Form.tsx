@@ -51,7 +51,7 @@ const SignUpForm: React.FC<SignUpFormProps> = () => {
     }
 
     try {
-      const response = await axios.post('./routes/signup', { name, email, password });
+      const response = await axios.post('././backend/routes/signup', { name, email, password });
       console.log(response.data);
       // Redirect to dashboard on successful signup
       window.location.href = '/dashboard';

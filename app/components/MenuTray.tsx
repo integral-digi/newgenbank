@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Popover } from "@headlessui/react";
+import { buttonInfo } from "./Nav";
 
 const MenuTray = () => {
     const router = useRouter();
@@ -38,6 +39,19 @@ const MenuTray = () => {
                         {item.name.toUpperCase()}
                     </motion.p>
                 ))}
+                    <section>
+                        <button className="flex items-center space-x-2" onClick={()=>router.push("/secure-login")}>
+                            <Image 
+                                src={buttonInfo.icon} 
+                                alt="user icon" 
+                                width={24}
+                                height={24}
+                            />
+                            <p className="whitespace-nowrap text-white font-medium">
+                                {buttonInfo.name}
+                            </p>
+                        </button>
+                    </section>
                 </section>
             </section>
     )
