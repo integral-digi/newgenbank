@@ -11,15 +11,15 @@ export const investOptions = [
         name: "Stocks", 
         info: "Lower risk, Lower Interest rate, Very high success rate", 
         options: [
-            {product: "Apple", interest: 16.34, duration: "24 hours", logo:"/images/apple.svg"},
-            {product: "Microsoft", interest: 17.15, duration: "24 hours", logo:"/images/microsoft.svg"},
-            {product: "Amazon", interest: 13.63, duration: "24 hours", logo:"/images/amazon.svg"},
-            {product: "Meta", interest: 12.50, duration: "24 hours", logo:"/images/meta.svg"},
-            {product: "Nvidia", interest: 14.10, duration: "24 hours", logo:"/images/nvidia.svg"},
-            {product: "Tesla", interest: 11.28, duration: "24 hours", logo:"/images/tesla.svg"},
-            {product: "Berkshire Hathaway", interest: 11.77, duration: "24 hours", logo:"/images/berkshire.svg"},
-            {product: "Netflix", interest: 10.60, duration: "24 hours", logo:"/images/netflix.svg"},
-            {product: "Chevron", interest: 10.65, duration: "24 hours", logo:"/images/chevron.svg"},
+            {product: "Apple", interest: 16.34, duration: "72 hours", logo:"/images/apple.svg"},
+            {product: "Microsoft", interest: 17.15, duration: "72 hours", logo:"/images/microsoft.svg"},
+            {product: "Amazon", interest: 13.63, duration: "72 hours", logo:"/images/amazon.svg"},
+            {product: "Meta", interest: 12.50, duration: "72 hours", logo:"/images/meta.svg"},
+            {product: "Nvidia", interest: 14.10, duration: "72 hours", logo:"/images/nvidia.svg"},
+            {product: "Tesla", interest: 11.28, duration: "72 hours", logo:"/images/tesla.svg"},
+            {product: "Berkshire Hathaway", interest: 11.77, duration: "72 hours", logo:"/images/berkshire.svg"},
+            {product: "Netflix", interest: 10.60, duration: "72 hours", logo:"/images/netflix.svg"},
+            {product: "Chevron", interest: 10.65, duration: "72 hours", logo:"/images/chevron.svg"},
         ]
     },
     {
@@ -27,12 +27,12 @@ export const investOptions = [
         name: "Commodities", 
         info: "Moderate risk, Competitive Interest rate, Moderately high success rate", 
         options: [
-            {product: "Crude Oil", interest: 85, duration: "24 hours", logo:"/images/oil.svg"},
-            {product: "Natural Gas", interest: 16.1, duration: "24 hours", logo:"/images/gas.svg"},
-            {product: "Gold", interest: 60.14, duration: "24 hours", logo:"/images/gold.svg"},
-            {product: "Metals", interest: 20.82, duration: "24 hours", logo:"/images/metal.svg"},
-            {product: "Silver", interest: 40.25, duration: "24 hours", logo:"/images/metal.svg"},
-            {product: "Aluminium", interest: 15.09, duration: "24 hours", logo:"/images/metal.svg"},
+            {product: "Crude Oil", interest: 85, duration: "72 hours", logo:"/images/oil.svg"},
+            {product: "Natural Gas", interest: 16.1, duration: "72 hours", logo:"/images/gas.svg"},
+            {product: "Gold", interest: 60.14, duration: "72 hours", logo:"/images/gold.svg"},
+            {product: "Metals", interest: 20.82, duration: "72 hours", logo:"/images/metal.svg"},
+            {product: "Silver", interest: 40.25, duration: "72 hours", logo:"/images/metal.svg"},
+            {product: "Aluminium", interest: 15.09, duration: "72 hours", logo:"/images/metal.svg"},
         ]
     },
     {
@@ -40,12 +40,12 @@ export const investOptions = [
         name: "Cryptocurrencies", 
         info: "High risk, High Interest rate, high success rate", 
         options: [
-            {product: "Bitcoin", interest: 280, duration: "24 hours", logo:"/images/btc.svg"},
-            {product: "Ethereum", interest: 280, duration: "24 hours", logo:"/images/eth.svg"},
-            {product: "Litecoin", interest: 280, duration: "24 hours", logo:"/images/ltc.svg"},
-            {product: "XRP", interest: 280, duration: "24 hours", logo:"/images/ripple.svg"},
-            {product: "Solana", interest: 280, duration: "24 hours", logo:"/images/solana.svg"},
-            {product: "TRON", interest: 280, duration: "24 hours", logo:"/images/tron.svg"},
+            {product: "Bitcoin", interest: 280, duration: "72 hours", logo:"/images/btc.svg"},
+            {product: "Ethereum", interest: 280, duration: "72 hours", logo:"/images/eth.svg"},
+            {product: "Litecoin", interest: 280, duration: "72 hours", logo:"/images/ltc.svg"},
+            {product: "XRP", interest: 280, duration: "72 hours", logo:"/images/ripple.svg"},
+            {product: "Solana", interest: 280, duration: "72 hours", logo:"/images/solana.svg"},
+            {product: "TRON", interest: 280, duration: "72 hours", logo:"/images/tron.svg"},
         ]
     },
 ];

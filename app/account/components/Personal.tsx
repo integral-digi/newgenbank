@@ -1,32 +1,44 @@
 "use client"
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { user } from "./UserData";  
+
+interface UserSettings {
+    username: string;
+    firstName: string;
+    lastName: string;
+    address: string;
+}
+
+interface PersonalSettingsProps {
+    user: UserSettings;
+}
 
 export const sectionStyle: string = "w-full space-y-7";
 export const pStyle: string = "text-white text-base font-bold";
 export const inputStyle: string = "w-full rounded-md border border-gray-300 border-slate-600 text-white bg-transparent h-12 font-medium pl-6";
 
-
-const PersonalSettings = () => {
-    const [userName, setUserName] = useState(user.username);
-    const handleUChange = (event) => {
+const PersonalSettings: React.FC<PersonalSettingsProps> = ({ user }) => {
+    const [userName, setUserName] = useState<string>(user.username);
+    const handleUChange = (event: ChangeEvent<HTMLInputElement>) => {
         setUserName(event.target.value)
     }
-    const [firstName, setFirstName] = useState(user.firstName);
-    const handleFChange = (event) => {
+    const [firstName, setFirstName] = useState<string>(user.firstName);
+    const handleFChange = (event: ChangeEvent<HTMLInputElement>) => {
         setFirstName(event.target.value)
     }
-    const [lastName, setLastName] = useState(user.lastName);
-    const handleLChange = (event) => {
+    const [lastName, setLastName] = useState<string>(user.lastName);
+    const handleLChange = (event: ChangeEvent<HTMLInputElement>) => {
         setLastName(event.target.value)
     }
-    const [address, setAddress] = useState(user.address);
-    const handleAddChange = (event) => {
+    const [address, setAddress] = useState<string>(user.address);
+    const handleAddChange = (event: ChangeEvent<HTMLInputElement>) => {
         setAddress(event.target.value)
     }
-    const [fileUpload, setFileUpload] = useState(null);
-    const handleFileUpload = (event) => {
-        setFileUpload(event.target.files[0]);
+    const [fileUpload, setFileUpload] = useState<File | null>(null);
+    const handleFileUpload = (event: ChangeEvent<HTMLInputElement>) => {
+        if (event.target.files && event.target.files[0]) {
+            setFileUpload(event.target.files[0]);
+        }
     }
 
     const saveChanges = async () => {
