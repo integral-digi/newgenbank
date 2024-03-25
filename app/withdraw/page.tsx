@@ -1,7 +1,7 @@
 "use client"
-import SideNav from "@/components/dashcomps/SideNav";
+import SideNav from "../dashboard/components/Sidenav";
 import WithdrawForm from "./withcomps/Form";
-import TopBarTwo from "@/components/dashcomps/TopbarTwo";
+import TopNav from "../dashboard/components/TopNav";
 import InfoBar from "./withcomps/InfoSidebar";
 
 const WithdrawHome = () => {
@@ -12,7 +12,7 @@ const WithdrawHome = () => {
       </div>
       <div className="mx-auto py-6 w-[64%] lg:w-full lg:px-8">
         <div className="top-0 py-6 w-full">
-          <TopBarTwo currentTitle="Withdraw" />
+          <TopNav />
         </div>
         <div className="mt-24 grid grid-cols-2 gap-[20%] justify-between w-full lg:space-y-24 lg:block">
           <div className="block space-y-24 w-full">

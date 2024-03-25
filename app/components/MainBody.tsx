@@ -3,6 +3,8 @@ import { useState } from "react";
 import Balances, { formattedCurr } from "./Balances";
 import TransChart from "./TransChart";
 import TransacTable from "./TransacTable";
+import Promotion from "./Promotion";
+import AccountManager from "./AccoutManager";
 
 interface UserProps {
   name: string;
@@ -30,14 +32,14 @@ interface Transaction {
 }
 
 export const initialCheckingAccountData: Transaction[] = [
-  { date: '2022-01-01', type: 'inflow', amount: 1000, description: 'Salary deposit', status: 'pending', recipient: 'John Doe' },
-  { date: '2022-01-02', type: 'inflow', amount: 200, description: 'Bonus deposit', status: 'completed', recipient: 'Jane Smith' },
-  { date: '2022-01-03', type: 'outflow', amount: 400, description: 'Rent payment', status: 'completed', recipient: 'Landlord' },
-  { date: '2022-01-04', type: 'outflow', amount: 50, description: 'Grocery shopping', status: 'completed', recipient: 'Walmart IL' },
-  { date: '2022-01-05', type: 'inflow', amount: 300, description: 'Freelance payment', status: 'completed', recipient: 'Insignia Inc' },
-  { date: '2022-01-06', type: 'outflow', amount: 75, description: 'Dinner at a restaurant', status: 'completed', recipient: 'Restaurant XYZ' },
-  { date: '2022-01-07', type: 'inflow', amount: 150, description: 'Gift from a friend', status: 'completed', recipient: 'Frank B' },
-  { date: '2022-01-08', type: 'outflow', amount: 60, description: 'Utilities payment', status: 'completed', recipient: 'Utility Company' },
+  { date: '2022-01-01', type: 'outflow', amount: 1000, description: 'Trade Opened', status: 'pending', recipient: 'DollarFX' },
+  { date: '2022-01-02', type: 'inflow', amount: 200, description: 'Bonus deposit', status: 'completed', recipient: 'DollarFX' },
+  { date: '2022-01-03', type: 'outflow', amount: 400, description: 'Trade Opened', status: 'completed', recipient: 'DollarFX' },
+  { date: '2022-01-04', type: 'inflow', amount: 50, description: 'Daily profit added', status: 'completed', recipient: 'DollarFX' },
+  { date: '2022-01-05', type: 'outflow', amount: 300, description: 'Trade Opened', status: 'completed', recipient: 'DollarFX' },
+  { date: '2022-01-06', type: 'inflow', amount: 75, description: 'Daily profit added', status: 'completed', recipient: 'DollarFX' },
+  { date: '2022-01-07', type: 'outflow', amount: 150, description: 'Trade Opened', status: 'completed', recipient: 'DollarFX' },
+  { date: '2022-01-08', type: 'inflow', amount: 60, description: 'Daily profit added', status: 'completed', recipient: 'DollarFX' },
 ];
 
 const checkTime = (currentHour?: number) => {
@@ -60,7 +62,7 @@ const currentHour = new Date().getHours(); // Get the current hour of the day
 const timeOfDay = checkTime(currentHour); 
   
 export const user: UserProps = {
-  name: "Ariana",
+  name: "Efeturi C",
   avatar: "9u.jpg",
   balance: {
     totalBalance: 7250,
@@ -73,13 +75,13 @@ const MainBody = () => {
   const [checkingAccountData, setCheckingAccountData] = useState<Transaction[]>(initialCheckingAccountData);
   return (
       <div className="space-y-12 px-8 pt-6 w-full">
-          <section className="">
+          <section>
               <h1 className="text-2xl text-slate-950 font-bold">Good {timeOfDay}, {user.name}</h1>
           </section>
           <section className="flex h-max w-full justify-between">
             <span className="bg-white pt-20 space-y-12 w-[60%] shadow-sm rounded-xl">
               <span className="space-y-4">
-                <p className="text-xs font-medium text-neutral-400 text-center">TOTAL BALANCE</p>
+                <p className="text-xs font-medium text-neutral-400 text-center">PORTFOLIO BALANCE</p>
                 <p className="text-4xl text-center font-bold text-slate-950">{formattedCurr(user.balance.totalBalance)}</p>
               </span>
               <TransChart transactions={initialCheckingAccountData} />
@@ -88,8 +90,9 @@ const MainBody = () => {
               <Balances />
             </span>
           </section>
-          <section className="w-full">
-            <TransacTable />
+          <section className="w-full flex flex-1 items-start space-x-8">
+            <Promotion />
+            <AccountManager />
           </section>
       </div>
   );

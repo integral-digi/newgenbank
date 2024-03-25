@@ -25,13 +25,13 @@ const TopNav = () => {
 
     return (    
         <div className="flex items-center justify-between bg-transparent px-8">
-            <span className="relative">
-                <input type="search" className="placeholder:pl-12 placeholder:font-normal border border-color-slate-700 h-10 px-12 bg-white rounded-full" value={searchValue} onChange={(e) => (setSearchValue(e.target.value))} placeholder="search" />
+            <span className="relative text-white">
+                <input type="search" className="placeholder:pl-12 text-white placeholder:font-normal border border-color-slate-700 h-10 px-12 bg-white rounded-full" value={searchValue} onChange={(e) => (setSearchValue(e.target.value))} placeholder="search" />
                 <img src="/assets/search.svg" className="w-4 h-4 absolute top-3 left-4 opacity-30" />
             </span>
             <span className="">
                 <Popover className="relative" data-popover-target="money-dropdown">
-                    <Popover.Button className="flex items-center bg-slate-900 rounded-full">
+                    <Popover.Button className="flex items-center bg-indigo-800 rounded-full">
                         <span className="space-x-2 flex items-center  px-4 py-2">
                             <p className="font-normal text-center m-auto text-white">Move Money</p>
                             <ChevronDownIcon className="w-4 h-4 text-white" />

@@ -1,21 +1,38 @@
-"use client"
-import MainBody from "./components/MainBody";
-import SideNav from "./components/Sidenav";
-import TopNav from "./components/TopNav";
+import ActivityFeed from "./components/Activity";
+import CTA from "./components/CTA";
+import Empower from "./components/Empower";
+import FAQ from "./components/Faqs";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import MobileNav from "./components/MobileNav";
+import Nav from "./components/Nav";
+import Opportunities from "./components/Opportunities";
+import Potential from "./components/Potential";
+import Stats from "./components/Stats";
+import Testimonials from "./components/Testimonial";
+import Ticker from "./components/Ticker";
 
 const Home = () => {
   return (
-    <body className="w-full h-full scroll-m-2">
-      <div className="flex">
-        <section className="w-[18%]">
-          <SideNav />
-        </section>
-        <section className="w-[82%] space-y-8 px-8 py-6 block">
-          <TopNav />
-          <MainBody />
-        </section>
-      </div>
-    </body>
+    <main className="px-32 bg-slate-950 lg:px-8 lg:py-12 lg:w-full">
+      <MobileNav />
+      <section className="space-y-48">
+        <Nav />
+        <Hero />
+        <Ticker />
+        <Features />
+        <Stats />
+        <Potential />
+        <Opportunities />
+        <Empower />
+        <ActivityFeed />
+        <Testimonials />
+        <FAQ />
+        <CTA />
+        <Footer />
+      </section>
+    </main>
   )
 }
 

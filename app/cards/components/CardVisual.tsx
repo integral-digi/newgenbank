@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { formattedCurr } from "@/app/components/Balances";
+import { formattedCurr } from "@/app/dashboard/components/Balances";
 
 const CardVisual = () => {
   const cardBalance: number = 0;

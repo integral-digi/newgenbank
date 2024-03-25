@@ -11,10 +11,10 @@ interface DropdownItemProps {
 
 const dropdownItems: DropdownItemProps[] = [
   {
-    label: 'Pay Someone',
-    value: 'pay-someone',
+    label: 'Withdraw Funds',
+    value: 'withdraw',
     icon: <BanknotesIcon className="w-4 h-4" />,
-    onClick: () => console.log('pay someone'),
+    onClick: () => console.log('withdraw'),
   },
   {
     label: 'Deposit Funds',

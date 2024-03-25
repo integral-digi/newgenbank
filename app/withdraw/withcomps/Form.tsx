@@ -13,7 +13,7 @@ const WithdrawForm = () => {
             </div>
             <button id="withdrawal" className="w-full px-8 h-20 bg-transparent rounded-lg border-2 border-gray-300 border-dashed">
                 <p className="text-center dark:text-white text-slate-600 text-base font-secondary">
-                    Add Bank Account
+                    Add Wallet Address
                 </p>
             </button>
         </div>

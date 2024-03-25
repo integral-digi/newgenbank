@@ -5,35 +5,35 @@
 @layer base {
 
   @font-face {
-    font-family: "CircularStd-Medium";
-    src: url("/fonts/CircularStd-Medium.otf");
+    font-family: "GreycliffCF-Medium";
+    src: url("/fonts/GreycliffCF-Medium.otf");
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "CircularStd-Black";
-    src: url("/fonts/CircularStd-Black.otf");
+    font-family: "GreycliffCF-Heavy";
+    src: url("/fonts/GreycliffCF-Heavy.otf");
     font-weight: 900;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "CircularStd-Bold";
-    src: url("/fonts/CircularStd-Bold.otf");
+    font-family: "GreycliffCF-Bold";
+    src: url("/fonts/GreycliffCF-Bold.otf");
     font-weight: 600;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "CircularStd-Book";
-    src: url("/fonts/CircularStd-Book.otf");
+    font-family: "GreycliffCF-Regular";
+    src: url("/fonts/GreycliffCF-Regular.otf");
     font-weight: 400;
     font-style: normal;
   }
 
   body {
-    background: #F8FAFF;
+    background: #020617;
   }
 }
 

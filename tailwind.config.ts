@@ -1,25 +1,18 @@
-import type { Config } from 'tailwindcss';
-
-// module.exports = {
-//   darkMode: 'media',
-//   // ...
-// };
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'class',
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}'
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        medium: "CircularStd-Medium, sans",
-        bold: "CircularStd-Bold, sans",
-        black: "CircularStd-Black, sans",
-        normal: "CircularStd-Book, sans"
+        normal: "GreycliffCF-Regular, sans",
+        medium: "GreycliffCF-Medium, sans",
+        bold: "GreycliffCF-Bold, sans",
+        black: "GreycliffCF-Heavy, sans"
       },
       
       screens: {
@@ -41,9 +34,7 @@ const config: Config = {
     },
   },
   plugins: [
-    require('@headlessui/react'),
-    require('flowbite/plugin')
+    require('@headlessui/react')
   ],
 };
-
 export default config;

@@ -19,7 +19,7 @@ const NotificationPanel = () => {
                     <section key={index} className="space-y-4"> 
                         <p className="text-xs text-neutral-400 font-medium">{transaction.date}</p>
                         <p className="text-xl text-slate-950 font-bold">{formattedCurr(transaction.amount)}</p>
-                        {transaction.type === "inflow" ? <p className="text-xs text-indigo-500 font-medium">Received from {transaction.recipient}</p> : <p className="text-xs text-indigo-500 font-medium">Paid to {transaction.recipient}</p>}
+                        {transaction.type === "inflow" ? <p className="text-xs text-indigo-500 font-medium">Received from {transaction.recipient}</p> : <p className="text-xs text-indigo-500 font-medium">Paid out to {transaction.recipient}</p>}
                         <p className="text-xs text-neutral-400 font-medium">{transaction.description}</p>
                         <hr className="w-full block h-px border border-neutral-100" />
                     </section>
