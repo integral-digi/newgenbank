@@ -5,11 +5,13 @@ const statsInfo = [
     {title: "80+", info: "countries available"},
 ]
 
+const title = "Numbers Don't Lie";
+
 const Stats = () => {
     return (
         <section className="w-full space-y-32">
             <h2 className="text-8xl text-white font-black text-center lg:text-5xl">
-                Numbers Don't Lie
+                {title}
             </h2>
             <section className="flex items-center justify-between lg:block lg:space-y-16">
                 {statsInfo.map((item, index)=> (

@@ -47,12 +47,12 @@ const stepElements: FaqType[] = steps.map((step, index) => ({
     icon: plusIcon.dark,
 }));
 
-//The main FAQ function (Arrow Function exported at the end of the module)
+//The main FAQ function
 const FAQ = () => {
     return (
         <section className='w-full h-full block lg:w-full'>
-            {stepElements.map((stepElement) => (
-                <Disclosure as="section">
+            {stepElements.map((stepElement, index) => (
+                <Disclosure as="section" key={index}>
                     {({ open }) => (
                         <>
                             <Disclosure.Button className="flex py-6 w-full justify-between">
