@@ -3,6 +3,7 @@ import { useState, ChangeEvent } from "react";
 import { user } from "./UserData";  
 
 interface UserSettings {
+    avatar?: string;
     username: string;
     firstName: string;
     lastName: string;
@@ -10,7 +11,7 @@ interface UserSettings {
 }
 
 interface PersonalSettingsProps {
-    user: UserSettings;
+    user: user;
 }
 
 export const sectionStyle: string = "w-full space-y-7";
