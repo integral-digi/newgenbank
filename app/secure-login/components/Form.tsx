@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import axios from "axios"; // Import axios for backend calls
+import axios from "axios"; 
 import Link from "next/link";
 
 interface LoginFormData {
@@ -29,17 +29,16 @@ const SignInForm: React.FC = () => {
       try {
         const response = await axios.post("/login", { email, password });
         console.log("Login successful:", response.data);
-        // Handle successful login (e.g., redirect to dashboard)
+        // Handle successful login
         window.location.href = '/dashboard';
-      } catch (error) {
+      } catch (error: any) {
         console.error("Error logging in:", error.response.data);
-        setError(error.response.data?.message || "Login failed"); // More informative error message
+        setError(error.response.data?.message || "Login failed"); 
       }
     };
   
     return (
       <section className="w-80 space-y-8 mx-auto py-16 lg:w-full">
-        {/* ... rest of your component JSX with improvements ... */}
         <section className="left-0 block pb-8">
           <img src="/assets/logo.svg" alt="logo" className="h-12 w-auto lg:h-8" />
         </section>
@@ -72,7 +71,7 @@ const SignInForm: React.FC = () => {
                   className="w-full h-12 pl-4 bg-transparent text-white rounded-lg border border-slate-800 font-medium"
                   id="password"
                   type={showPassword ? "text" : "password"} // Toggle password visibility
-                  name="password" // Added name for form data
+                  name="password" //
                   value={formData.password}
                   onChange={handleInputChange}
                 />
@@ -80,7 +79,7 @@ const SignInForm: React.FC = () => {
                   src="/assets/Eye-open.svg"
                   className="h-4 w-4 absolute right-6 top-4 cursor-pointer"
                   alt="eye"
-                  onClick={() => setShowPassword(!showPassword)} // Toggle password visibility state
+                  onClick={() => setShowPassword(!showPassword)} 
                 />
               </section>
             </section>
