@@ -1,10 +1,9 @@
 "use client"
 import { useState } from "react";
-import Balances, { formattedCurr } from "./Balances";
-import TransChart from "./TransChart";
-import TransacTable from "./TransacTable";
-import Promotion from "./Promotion";
-import AccountManager from "./AccoutManager";
+import Balances, { formattedCurr } from "../dashboard/components/Balances";
+import TransChart from "../dashboard/components/TransChart";
+import Promotion from "../dashboard/components/Promotion";
+import AccountManager from "../dashboard/components/AccoutManager";
 
 interface UserProps {
   name: string;
