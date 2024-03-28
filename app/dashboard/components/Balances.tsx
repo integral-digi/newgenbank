@@ -27,7 +27,7 @@ const Balances = () => {
         const data = await response.json();
         setCheckingBalance(data.checkingBal);
         setSavingBalance(data.savingBal);
-      } catch (error) {
+      } catch (error: any) {
         setError(error.message);
       }
     };
