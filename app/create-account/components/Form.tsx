@@ -52,14 +52,17 @@ const SignUpForm: React.FC<SignUpFormProps> = () => {
 
     try {
       const response = await axios.post('http://localhost:4000/routes/signup', { name, email, password });
-      console.log(response.data);
+      if (!response) {
+        throw new Error('Response is undefined');
+      }
+      console.log(response.data); // Check if response.data exists
       // Redirect to dashboard on successful signup
       window.location.href = '/dashboard';
-    } catch (error) {
-      console.error("Error signing up:", error.response.data);
+    } catch (error: any) {
+      console.error("Error signing up:", error.response?.data || error.message);
       setFormData((prevState) => ({
         ...prevState,
-        error: error.response.data?.message || "Signup failed",
+        error: error.response?.data?.message || "Signup failed",
       }));
     }
   };

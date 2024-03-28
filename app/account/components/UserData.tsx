@@ -1,4 +1,32 @@
-export const user = {
+// UserData.ts
+export type User = {
+    avatar: string;
+    username: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    address: string;
+    nokName: string;
+    nokMobNum: string;
+    isVerified: boolean;
+    bank: {
+        bankName: string;
+        accNum: string;
+        routeNum: string;
+    };
+    balance: {
+        availableBal: number;
+        ledgerBal: number;
+        escrowBal: number;
+    };
+    virtualInfo: {
+        cardNum: number;
+        accNum: number;
+    };
+};
+
+
+export const user: User = {
     avatar: "/images/userOne.jpg",
     username: "Efe",
     firstName: "Efe",
