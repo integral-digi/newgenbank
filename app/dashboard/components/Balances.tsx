@@ -12,7 +12,7 @@ export const formattedCurr = (curr:any) => {
     }) || '';
   };
 
-const Balance = () => {
+const Balances = () => {
   const [checkingBalance, setCheckingBalance] = useState(null);
   const [savingBalance, setSavingBalance] = useState(null);
   const [error, setError] = useState(null);
@@ -69,4 +69,4 @@ const Balance = () => {
   );
 };
 
-export default Balance;
+export default Balances;
