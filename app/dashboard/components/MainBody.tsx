@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import Balances, { formattedCurr } from "./Balances";
+import Balance, { formattedCurr } from "./Balances";
 import TransChart from "./TransChart";
 import Promotion from "./Promotion";
 import AccountManager from "./AccoutManager";
@@ -88,7 +88,7 @@ const MainBody = () => {
               </section>
             </section>
             <section className="w-[36%] lg:w-full">
-              <Balances />
+              <Balance />
             </section>
           </section>
           <section className="w-full flex flex-1 items-start space-x-8 lg:block lg:space-y-8 lg:space-x-0">
