@@ -12,10 +12,11 @@ import Potential from "./components/Potential";
 import Stats from "./components/Stats";
 import Testimonials from "./components/Testimonial";
 import Ticker from "./components/Ticker";
+import WhatsappButton from "./components/WhatsappBtton";
 
 const Home = () => {
   return (
-    <main className="px-32 bg-slate-950 lg:px-8 lg:py-12 lg:w-full">
+    <main className="px-32 bg-slate-950 lg:px-8 lg:py-12 lg:w-full relative">
       <MobileNav />
       <section className="space-y-48">
         <Nav />
@@ -31,6 +32,9 @@ const Home = () => {
         <FAQ />
         <CTA />
         <Footer />
+        <section className="right-8 bottom-12 sticky object-right">
+          <WhatsappButton />
+        </section>
       </section>
     </main>
   )

@@ -10,9 +10,9 @@ const BottomNav = () => {
     return (
         <nav className="bg-slate-900 shadow-md h-14 w-full fixed bottom-0 z-30 hidden lg:block">
             <div className="flex justify-between items-center relative h-14 w-full px-8">
-                <Link href="/">
+                {/* <Link href="/">
                     <Bars3CenterLeftIcon className="text-white w-6 h-6" />
-                </Link>
+                </Link> */}
                 {navItems.map((item) => (
                     <Link href={item.href} key={item.id}>
                         <Image

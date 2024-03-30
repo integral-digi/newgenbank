@@ -34,7 +34,7 @@ const DepositForm = ({ depositAmt, setDepositAmt }: any) => {
   const currencies = { euros: "€", dollar: "$" };
 
   return (
-    <section className="w-full h-full bg-slate-900 rounded-xl">
+    <section className="w-full h-full bg-slate-900 rounded-xl relative">
       <section className="w-[60%] p-12 space-y-24 h-full mx-auto lg:w-full lg:px-6">
         <section className="flex items-center space-x-7 w-full">
           <span className="">

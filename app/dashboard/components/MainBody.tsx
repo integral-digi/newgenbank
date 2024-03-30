@@ -61,7 +61,7 @@ const currentHour = new Date().getHours(); // Get the current hour of the day
 const timeOfDay = checkTime(currentHour); 
   
 export const user: UserProps = {
-  name: "Efe",
+  name: "Alex",
   avatar: "9u.jpg",
   balance: {
     totalBalance: 7250,

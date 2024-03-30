@@ -46,7 +46,7 @@ const EthPopup = ({ isOpen, setIsOpen, depositAmt }: any) => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Dialog.Panel className="px-8 pt-1 pb-6 space-y-12 align-middle shadow-xl transition-all max-w-2xl transform z-50 bg-slate-900 m-auto -mt-[600px] rounded-2xl lg:-mt-[800px]">
+          <Dialog.Panel className="px-8 pt-1 pb-6 space-y-12 align-middle shadow-xl transition-all max-w-2xl transform z-50 bg-slate-900 m-auto -mt-[680px] rounded-2xl lg:-mt-[800px]">
             <section
               className="w-6 h-6 cursor-pointer absolute top-12 right-8"
               onClick={() => setIsOpen(false)}

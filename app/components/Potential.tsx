@@ -3,7 +3,7 @@ import Image from "next/image"
 const content = {
     title: "Unlock Your Earning Potential",
     info: "Experience the full spectrum of trading possibilities with DollarFX. Whether you're a novice investor or an experienced trader, our platform offers a range of services tailored to your needs. From intuitive trading interfaces to advanced analytics tools and personalized support, we provide everything you need to achieve your financial goals.",
-    image: "/assets/sectionImg.png"
+    image: "/images/illus2.png"
 }
 
 const Potential = () => {
@@ -22,8 +22,8 @@ const Potential = () => {
                     <Image 
                         src={content.image}
                         alt={content.title}
-                        width={400}
-                        height={400}
+                        width={720}
+                        height={720}
                     />
                 </section>
             </section>

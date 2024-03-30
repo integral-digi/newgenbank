@@ -7,7 +7,7 @@ const bannerImg = [
 
 const Banner = () => {
     return (
-        <div className="h-screen bg-indigo-800 justify-center flex items-center mx-auto"> 
+        <div className="min-h-screen h-full bg-indigo-800 justify-center flex items-center mx-auto"> 
         </div>
     );
 };

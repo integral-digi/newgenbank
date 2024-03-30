@@ -9,7 +9,7 @@ const DepositPage = () => {
     const [depositAmt, setDepositAmt] = useState(0);
 
     return (
-        <section className="w-full h-full scroll-m-2 min-h-screen lg:pb-24">
+        <section className="w-full h-full scroll-m-2 min-h-screen lg:pb-24 relative">
             <section className="flex">
                 <section className="w-[18%] lg:hidden">
                     <SideNav />

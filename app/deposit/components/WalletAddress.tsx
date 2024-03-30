@@ -38,7 +38,7 @@ const WalletAddress: React.FC<WalletAddressProps> = ({ depositAmt, copyToClipboa
           <p className="text-center text-base text-white font-mono">{walletAddress}</p>
           <button
             onClick={handleCopyAddress}
-            className="px-3 py-1 bg-indigo-800 text-white font-medium text-sm rounded-md focus:outline-none"
+            className="px-3 py-1 bg-transparent border border-white text-white font-medium text-sm rounded-md focus:outline-none"
           >
             <Image
               src={copySrc}
@@ -48,6 +48,13 @@ const WalletAddress: React.FC<WalletAddressProps> = ({ depositAmt, copyToClipboa
             />
           </button>
         </div>
+        <section className="mx-auto justify-center flex">
+          <button className="bg-indigo-800 text-white h-12 px-8 rounded-md focus:outline-none flex items-center justify-center">
+            <p className="text-center text-base text-white font-bold">
+              Proceed to Upload Payment Proof
+            </p>
+          </button>
+        </section>
       </section>
     </section>
   );

@@ -3,7 +3,7 @@ import Image from "next/image"
 const content = {
     title: "Discover Endless Opportunities",
     info: "Explore a world of opportunities across forex, stocks, and cryptocurrencies with DollarFX. Access a wide range of assets from global markets and seize the moment with real-time trading capabilities. Whether you're interested in currency pairs, blue-chip stocks, or emerging cryptocurrencies, we offer unparalleled access to the most lucrative opportunities.",
-    image: "/assets/sectionImg.png"
+    image: "/images/illus1.png"
 }
 
 const Opportunities = () => {

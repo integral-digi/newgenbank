@@ -1,17 +1,21 @@
 "use client"
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { Alert } from "@mui/material";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import WalletAddress from "./WalletAddress";
 
 const BitcoinPopup = ({ isOpen, setIsOpen, depositAmt }: any) => {
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
+
   const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      alert("Wallet address copied to clipboard!");
+      setShowSuccessAlert(true);
     } catch (error) {
       console.error("Failed to copy to clipboard:", error);
-      alert("Failed to copy wallet address to clipboard.");
+      setShowErrorAlert(true);
     }
   };
 
@@ -46,7 +50,7 @@ const BitcoinPopup = ({ isOpen, setIsOpen, depositAmt }: any) => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Dialog.Panel className="px-8 pt-1 pb-6 space-y-12 align-middle shadow-xl transition-all max-w-2xl transform z-50 bg-slate-900 m-auto -mt-[600px] rounded-2xl lg:-mt-[800px]">
+          <Dialog.Panel className="px-8 pt-1 pb-6 space-y-12 align-middle shadow-xl transition-all max-w-2xl transform z-50 bg-slate-900 m-auto -mt-[680px] rounded-2xl lg:-mt-[800px]">
             <section
               className="w-6 h-6 cursor-pointer absolute top-12 right-8"
               onClick={() => setIsOpen(false)}
@@ -57,7 +61,22 @@ const BitcoinPopup = ({ isOpen, setIsOpen, depositAmt }: any) => {
               Deposit
             </Dialog.Title>
             <section className="w-full">
-              <WalletAddress copyToClipboard={copyToClipboard} depositAmt={depositAmt} />
+              <WalletAddress
+                copyToClipboard={copyToClipboard}
+                depositAmt={depositAmt}
+              />
+            </section>
+            <section className="">
+              {showSuccessAlert && (
+                <Alert severity="success">
+                  Wallet address copied to clipboard!
+                </Alert>
+              )}
+              {showErrorAlert && (
+                <Alert severity="error">
+                  Failed to copy wallet address to clipboard!
+                </Alert>
+              )}
             </section>
           </Dialog.Panel>
         </Transition.Child>
