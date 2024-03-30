@@ -17,7 +17,7 @@ const InvestPanel = () => {
           }
           const data = await response.json();
           setCheckingBalance(data.checkingBal);
-        } catch (error) {
+        } catch (error:any) {
           setError(error.message);
         }
       };
