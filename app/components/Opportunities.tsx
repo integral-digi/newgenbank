@@ -10,12 +10,12 @@ const Opportunities = () => {
     return (
         <section className="w-full">
             <section className="flex items-center justify-between lg:block lg:space-y-12">
-                <section className="w-[40%] max-w-full lg:w-full">
+                <section className="w-[50%] max-w-full lg:w-full">
                     <Image 
                         src={content.image}
                         alt={content.title}
-                        width={400}
-                        height={400}
+                        width={960}
+                        height={640}
                     />
                 </section>
                 <section className="w-[40%] space-y-6 lg:w-full">

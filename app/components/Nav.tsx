@@ -3,6 +3,7 @@ import Image from "next/image";
 //the main navugation menu on the fobozo homepage
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import TranslateBox from "./Translate";
 
 interface NavChild {
     id: number;
@@ -51,6 +52,9 @@ const Nav: React.FC = () => {
                         </Link>
                     </section>
                 ))}
+            </section>
+            <section className="">
+                <TranslateBox />
             </section>
             <section>
                 <button className="flex items-center space-x-2" onClick={()=>router.push("/secure-login")}>
