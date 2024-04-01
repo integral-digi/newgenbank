@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 
 const ctaInfo = {
-    title: "Over 75 million USD paid out!",
+    title: "Over 15 million USD paid out!",
     subtitle: "Take control of your financial future. Start trading with confidence today!",
     buttonText: "sign up now"
 }
